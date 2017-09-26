@@ -7,6 +7,8 @@ WORKDIR /kaldi/tools
 RUN curl -LJO https://github.com/atgiannako/aimlkaldi/raw/master/srilm.tgz
 RUN bash -c ./install_srilm.sh
 
+RUN mkdir -p /kaldi/egs/aiml-asr
+
 WORKDIR /
 
 ENTRYPOINT ["/bin/bash"]
